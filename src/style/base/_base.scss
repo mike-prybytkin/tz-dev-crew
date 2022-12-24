@@ -1,0 +1,36 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  @include font-primary();
+  background-color: $color-background-body;
+  position: relative;
+  overflow-y: overlay;
+}
+
+h1 {
+  @include font-primary(2.2rem, 600, $color-heading);
+  display: inline-block;
+  margin: 0;
+}
+
+h2 {
+  @include font-primary(4.8rem, 500, $color-heading);
+}
+
+h4 {
+  @include font-primary(2.4rem, 500, $color-text-additionaly);
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+li {
+  list-style-type: none;
+}

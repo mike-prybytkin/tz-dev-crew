@@ -1,5 +1,9 @@
-@import '~normalize-scss';
-$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
-@import '~@fortawesome/fontawesome-free/scss/fontawesome';
-@import '~@fortawesome/fontawesome-free/scss/solid';
-@import '~@fortawesome/fontawesome-free/scss/regular';
+@import './abstracts/constants';
+@import './abstracts/mixins';
+@import './base/reset';
+@import './base/base';
+@import './vendors/fontawesome';
+@import './components/buttons';
+
+@import './layouts/wrapper';
+@import './layouts/header';
