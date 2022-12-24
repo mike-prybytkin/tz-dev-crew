@@ -1,0 +1,45 @@
+.promo {
+  padding-top: 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.promo__wrapper {
+  max-width: 600px;
+  .promo__heading {
+    margin-bottom: 30px;
+    @include font-primary(5rem, 500, $color-heading);
+    line-height: 140%;
+    i {
+      color: $color-primary;
+    }
+  }
+
+  p {
+    max-width: 490px;
+  }
+
+  .promo__form {
+    max-width: 490px;
+    margin-top: 60px;
+  }
+
+  .promo__image {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    width: 600px;
+    height: 580px;
+  }
+}
+
+.promo__social-media {
+  margin-top: 110px;
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      display: inline-block;
+    }
+  }
+}
