@@ -44,3 +44,13 @@
     border-color: $color-primary;
   }
 }
+
+%blur-effect {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: $color-blur;
+  border-radius: 50%;
+  @extend %transition;
+  filter: blur(50px);
+}

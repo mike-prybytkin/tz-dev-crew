@@ -6,16 +6,10 @@
   border-radius: 15px;
 
   .tool__blur-effect {
-    position: absolute;
-    width: 65px;
-    height: 65px;
-    background: $color-tool-blur;
+    @extend %blur-effect;
     right: 30px;
     top: -6px;
-    border-radius: 50%;
     display: none;
-    @extend %transition;
-    filter: blur(50px);
   }
   .tool__title {
     @include flex(flex-start);

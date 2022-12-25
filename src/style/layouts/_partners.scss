@@ -1,0 +1,33 @@
+.partners {
+  padding-top: 200px;
+  .partners__wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 82px;
+    background: $color-background-partners;
+    @include linear-border(
+      $background: linear-gradient(90.89deg, rgba(255, 255, 255, 0.1) -1.67%, rgba(255, 255, 255, 0) 103.73%) border-box, 
+      $br-radius: 25px 
+    );
+
+    .partners__heading {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    .partners__brands {
+      @include flex(space-between);
+      gap: 10px;
+      .brand {
+        height: 50px;
+        width: auto;
+      }
+    }
+
+    .partners__blur-effect {
+      @extend %blur-effect;
+      left: -10px;
+      top: -10px;
+    }
+  }
+}
