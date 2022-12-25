@@ -1,42 +1,15 @@
-%button-rectangular {
-  padding: 12px 28px;
-  border-radius: 8px;
-  @extend %transition;
+.button {
+  @extend %button-rectangular;
 }
 
-%button-colored {
-  background: $color-primary;
-  color: $color-light;
-  border: 1px solid $color-primary;
-  &:hover {
-    border-color: $color-light;
-  }
+.button_colored {
+  @extend %button-colored;
 }
 
-%button-none-colored {
-  background: transparent;
-  color: $color-text-additionaly;
-  border: 1px solid $color-background-body;
-  &:hover {
-    border-color: $color-primary;
-  }
+.button_none-colored {
+  @extend %button-none-colored;
 }
 
-%button-navigation {
-  cursor: pointer;
-  @extend %transition;
-  border-bottom: 2px solid $color-background-body;
-  &:hover {
-    color: $color-primary;
-    border-bottom: 2px solid $color-primary;
-  }
-}
-
-%button-bordered {
-  background: transparent;
-  color: $color-primary;
-  border: 1px solid $color-button-bordered;
-  &:hover {
-    border-color: $color-primary;
-  }
+.button_navigation {
+  @extend %button-navigation;
 }

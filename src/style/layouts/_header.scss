@@ -17,32 +17,15 @@
       margin-right: 12px;
     }
   }
-  .header__title {
-    @extend %button-navigation;
-  }
+
   .header__navigation {
     .navigation {
       @include flex();
       gap: 30px;
       padding: 0;
-      .navigation__link {
+      .button_navigation {
         font-weight: 500;
-        @extend %button-navigation;
       }
-    }
-  }
-
-  .header__buttons {
-    .button {
-      @extend %button-rectangular;
-    }
-
-    .button_colored {
-      @extend %button-colored;
-    }
-
-    .button_none-colored {
-      @extend %button-none-colored;
     }
   }
 }

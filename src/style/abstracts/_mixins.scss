@@ -27,3 +27,23 @@
     flex-basis: $width;
   }
 }
+
+@mixin linear-border($background, $br-radius) {
+  position: relative;
+  z-index: 0;
+  border-radius: $br-radius;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid transparent;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    background: $background;
+    border-radius: $br-radius;
+  }
+};
