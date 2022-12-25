@@ -1,0 +1,31 @@
+.tools {
+  padding-top: 200px;
+}
+
+.tools__wrapper {
+  text-align: center;
+
+  .layout-3-column {
+    row-gap: 40px;
+  }
+
+  .tools__heading {
+    margin-bottom: 25px;
+  }
+
+  .tools__text {
+    font-size: 16px;
+    max-width: 420px;
+    margin: auto;
+    margin-bottom: 90px;
+  }
+
+  .tools-button {
+    padding-top: 100px;
+
+    button {
+      @extend %button-rectangular;
+      @extend %button-bordered;
+    }
+  }
+}

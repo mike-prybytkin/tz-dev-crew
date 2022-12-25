@@ -1,9 +1,10 @@
 .header {
   position: sticky;
   top: 0;
-  padding-top: 26px;
   background: $color-background-body;
   z-index: 1;
+  padding-top: 26px;
+  padding-bottom: 10px;
 }
 
 .header__wrapper {

@@ -1,13 +1,13 @@
 %button-rectangular {
   padding: 12px 28px;
   border-radius: 8px;
-  transition: all .3s
+  @extend %transition;
 }
 
 %button-colored {
   background: $color-primary;
   color: $color-light;
-  border: 2px solid $color-primary;
+  border: 1px solid $color-primary;
   &:hover {
     border-color: $color-light;
   }
@@ -16,7 +16,7 @@
 %button-none-colored {
   background: transparent;
   color: $color-text-additionaly;
-  border: 2px solid $color-background-body;
+  border: 1px solid $color-background-body;
   &:hover {
     border-color: $color-primary;
   }
@@ -24,10 +24,19 @@
 
 %button-navigation {
   cursor: pointer;
-  transition: all .3s;
+  @extend %transition;
   border-bottom: 2px solid $color-background-body;
   &:hover {
     color: $color-primary;
     border-bottom: 2px solid $color-primary;
+  }
+}
+
+%button-bordered {
+  background: transparent;
+  color: $color-primary;
+  border: 1px solid $color-button-bordered;
+  &:hover {
+    border-color: $color-primary;
   }
 }

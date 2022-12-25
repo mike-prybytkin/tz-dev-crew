@@ -118,7 +118,6 @@ textarea {
 
 body {
     margin: 0;
-    box-sizing: border-box;
 }
 
 // =============================================================================
@@ -523,4 +522,8 @@ input {
         	*width: 13px; // 3
     	}
     }
+}
+
+* {
+    box-sizing: border-box;
 }

@@ -15,8 +15,9 @@
     }
   }
 
-  p {
+  .promo__text {
     max-width: 490px;
+    font-size: 16px;
   }
 
   .promo__form {
@@ -40,6 +41,12 @@
     margin: 0;
     li {
       display: inline-block;
+      .ico {
+        @extend %transition;
+        &:hover {
+          filter: brightness(0) saturate(100%) invert(55%) sepia(55%) saturate(2632%) hue-rotate(337deg) brightness(99%) contrast(105%);
+        }
+      }
     }
   }
 }
