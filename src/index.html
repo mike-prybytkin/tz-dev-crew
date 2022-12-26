@@ -19,10 +19,10 @@
       </a>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="button_navigation">Home</li>
-          <li class="button_navigation">Categories</li>
-          <li class="button_navigation">My Collection</li>
-          <li class="button_navigation">Blog</li>
+          <li class="button_navigation navigation__item">Home</li>
+          <li class="button_navigation navigation__item">Categories</li>
+          <li class="button_navigation navigation__item">My Collection</li>
+          <li class="button_navigation navigation__item">Blog</li>
         </ul>
       </nav>
       <div class="header__buttons">
@@ -341,12 +341,43 @@
   </main>
 
   <footer class="footer">
-    <div class="wrapper">
+    <div class="wrapper footer__wrapper">
       <div class="layout-4-column">
-        <div class="footer__column">
-          <h4></h4>
-          <p></p>
-          <p></p>
+
+        <div class="column footer__column">
+          <a href="#" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
+            <h4 class="column__heading header__title button_navigation">antools.</h4>
+          </a>
+          <ul class="column__items">
+            <li class="column__item column__item_bold">&copy; 2021. Antools</li>
+            <li class="column__item">Antool is a web collection of information on paid or free Design and Development tools</li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Contact Us</h4>
+          <ul class="column__items">
+            <li class="column__item"><a class="button_navigation" href="tel:+621987463" title="telephone"><i class="fa-solid fa-phone-volume"></i> +621987463</a></li>
+            <li class="column__item"><a class="button_navigation" href="https://www.google.com/maps/place/Building+No+10+Cyberhub/@28.4908776,77.0838359,15z/data=!4m5!3m4!1s0x390d1938e95b3923:0xf51b0e5de754d497!8m2!3d28.4943288!4d77.0869634" target="_blank" title="address"><i class="fa-solid fa-location-dot"></i> M Building, No.10 A</a></li>
+            <li class="column__item"><a class="button_navigation" href="mailto: antools@awesome.com"><i class="fa-solid fa-envelope"></i> antools@awesome.com</a></li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Categories</h4>
+          <ul class="column__items">
+            <li class="column__item button_navigation">Design</li>
+            <li class="column__item button_navigation">Development</li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Company Info</h4>
+          <ul class="column__items">
+            <li class="column__item button_navigation">About Us</li>
+            <li class="column__item button_navigation">Our Partners</li>
+            <li class="column__item button_navigation">Blog</li>
+          </ul>
         </div>
       </div>
     </div>
