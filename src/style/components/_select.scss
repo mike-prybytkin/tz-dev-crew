@@ -1,0 +1,14 @@
+.select {
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: none;
+  font: inherit;
+  color: inherit;
+  .select__item {
+    color: $color-text-primary;
+    background: $color-background-body;
+    outline: none;
+    border: none;
+  }
+}

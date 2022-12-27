@@ -10,7 +10,7 @@
     margin-bottom: 30px;
     @include font-primary(5rem, 500, $color-heading);
     line-height: 140%;
-    i {
+    span {
       color: $color-primary;
     }
   }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
   <meta charset="UTF-8">
@@ -12,15 +12,23 @@
 </head>
 
 <body>
+  <span id="home"></span>
   <header class="header">
     <div class="wrapper header__wrapper">
-      <a href="#" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
+      <a href="#home" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
         <h1 class="header__title button_navigation">antools.</h1>
       </a>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="button_navigation navigation__item">Home</li>
-          <li class="button_navigation navigation__item">Categories</li>
+          <li class="button_navigation navigation__item"><a href="#home">Home</a></li>
+          <li class="button_navigation navigation__item">
+            <select class="select" onchange="window.location.href=this.options[this.selectedIndex].value"
+              name="categories" id="select-category">
+              <option class="select__item" value="#home">Categories</option>
+              <option class="select__item" value="#design-tools">Design</option>
+              <option class="select__item" value="#development-tools">Develop</option>
+            </select>
+          </li>
           <li class="button_navigation navigation__item">My Collection</li>
           <li class="button_navigation navigation__item">Blog</li>
         </ul>
@@ -37,11 +45,11 @@
       <div class="wrapper">
         <div class="promo__wrapper">
           <div class="promo__content">
-            <h2 class="promo__heading">Awesome tools for Designer & Developer<i>.</i></h2>
+            <h2 class="promo__heading">Awesome tools for Designer & Developer<span>.</span></h2>
             <p class="promo__text">Antool is a web collection of information on paid or free Design and Development
               tools</p>
             <div class="form-wrapper promo__form">
-              <form class="form" action="" id="search-tools-form">
+              <form class="form" action="GET" id="search-tools-form">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="form__input input_text" type="text" name="search-tools-input"
                   placeholder="find more than 430+ tools...">
@@ -66,7 +74,7 @@
       </div>
     </section>
 
-    <section class="tools">
+    <section class="tools" id="design-tools">
       <div class="wrapper">
         <div class="tools__wrapper">
           <h2 class="tools__heading">Most Popular Tools</h2>
@@ -212,7 +220,7 @@
       </div>
     </section>
 
-    <section class="partners">
+    <section class="partners" id="partners">
       <div class="wrapper partners__wrapper">
         <h4 class="partners__heading">Trusted more than 150+ brand</h4>
         <div class="partners__brands">
@@ -225,7 +233,7 @@
       </div>
     </section>
 
-    <section class="newcomer-tools">
+    <section class="newcomer-tools" id="development-tools">
       <div class="wrapper newcomer-tools__wrapper">
         <div class="newcomer-tools__content">
           <h2 class="newcomer-tools__heading">Newcomer Tools</h2>
@@ -326,7 +334,7 @@
       </div>
     </section>
 
-    <section class="slider">
+    <section class="slider" id="our-team">
       <div class="wrapper slider__wrapper">
 
         <div class="swiper team-swiper">
@@ -336,11 +344,11 @@
               <div class="team-slide layout-2-column">
                 <div class="tead-slide__person person">
                   <div class="person__info">
-                    <p class="person__name">Sam Wilson</p>
+                    <h5 class="person__name">Sam Wilson</h5>
                     <p class="person__position">Creative Manager</p>
                   </div>
                   <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
-                  <img class="person__photo" src="./assets/png/team/Sam Wilson.png" alt="Sam Wilson">
+                  <img class="person__photo" src="./assets/png/team/Sam-Wilson.png" alt="Sam Wilson">
                 </div>
                 <div class="tead-slide__text">
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem fuga quaerat perferendis
@@ -354,11 +362,11 @@
               <div class="team-slide layout-2-column">
                 <div class="tead-slide__person person">
                   <div class="person__info">
-                    <p class="person__name">Ronald Richards</p>
+                    <h5 class="person__name">Ronald Richards</h5>
                     <p class="person__position">Product Manager</p>
                   </div>
                   <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
-                  <img class="person__photo" src="./assets/png/team/Ronald Richards.png" alt="Ronald Richards">
+                  <img class="person__photo" src="./assets/png/team/Ronald-Richards.png" alt="Ronald Richards">
                 </div>
                 <div class="tead-slide__text">
                   <p>Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex
@@ -373,14 +381,20 @@
               <div class="team-slide layout-2-column">
                 <div class="tead-slide__person person">
                   <div class="person__info">
-                    <p class="person__name">John Doyle</p>
+                    <h5 class="person__name">John Doyle</h5>
                     <p class="person__position">Sales Manager</p>
                   </div>
                   <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
-                  <img class="person__photo" src="./assets/png/team/John Doyle.png" alt="John Doyle">
+                  <img class="person__photo" src="./assets/png/team/John-Doyle.png" alt="John Doyle">
                 </div>
                 <div class="tead-slide__text">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis natus sint nostrum pariatur quidem vitae perspiciatis corrupti ut eum quos hic iusto unde, tempore enim exercitationem numquam aliquid accusantium eligendi dolorem. Expedita ad quas ab reiciendis id, fuga rem ipsum doloremque incidunt ducimus velit necessitatibus laborum laudantium eos labore sint dicta eligendi dolore rerum? Modi doloribus nemo aliquid doloremque. Perferendis illum error commodi veniam expedita enim, fugiat reprehenderit culpa amet officiis voluptate possimus sit hic laboriosam unde libero molestias dolor veritatis ea, quod excepturi voluptatum consequatur! Illum, corrupti aliquid.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis natus sint nostrum pariatur quidem
+                    vitae perspiciatis corrupti ut eum quos hic iusto unde, tempore enim exercitationem numquam aliquid
+                    accusantium eligendi dolorem. Expedita ad quas ab reiciendis id, fuga rem ipsum doloremque incidunt
+                    ducimus velit necessitatibus laborum laudantium eos labore sint dicta eligendi dolore rerum? Modi
+                    doloribus nemo aliquid doloremque. Perferendis illum error commodi veniam expedita enim, fugiat
+                    reprehenderit culpa amet officiis voluptate possimus sit hic laboriosam unde libero molestias dolor
+                    veritatis ea, quod excepturi voluptatum consequatur! Illum, corrupti aliquid.</p>
                 </div>
               </div>
             </div>
@@ -399,7 +413,7 @@
         <h2 class="contributor__heading">Become a contributor?</h2>
         <p class="contributor__text">Join us and get tips & tricks to become a great Designer and Developer</p>
         <div class="form-wrapper contributor__form">
-          <form class="form" action="" id="contributor-email-form">
+          <form class="form" action="GET" id="contributor-email-form">
             <input class="form__input input_text" type="text" name="contributor-email-input"
               placeholder="Enter your email">
             <input class="form__button button button_colored" type="button" value="Join Us">
@@ -414,7 +428,7 @@
       <div class="layout-4-column">
 
         <div class="column footer__column">
-          <a href="#" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
+          <a href="#home" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
             <h4 class="column__heading header__title button_navigation">antools.</h4>
           </a>
           <ul class="column__items">
@@ -432,7 +446,7 @@
             <li class="column__item"><a class="button_navigation"
                 href="https://www.google.com/maps/place/Building+No+10+Cyberhub/@28.4908776,77.0838359,15z/data=!4m5!3m4!1s0x390d1938e95b3923:0xf51b0e5de754d497!8m2!3d28.4943288!4d77.0869634"
                 target="_blank" title="address"><i class="fa-solid fa-location-dot"></i> M Building, No.10 A</a></li>
-            <li class="column__item"><a class="button_navigation" href="mailto: antools@awesome.com"><i
+            <li class="column__item"><a class="button_navigation" href="mailto:antools@awesome.com"><i
                   class="fa-solid fa-envelope"></i> antools@awesome.com</a></li>
           </ul>
         </div>
@@ -440,16 +454,16 @@
         <div class="column footer__column">
           <h4 class="column__heading">Categories</h4>
           <ul class="column__items">
-            <li class="column__item button_navigation">Design</li>
-            <li class="column__item button_navigation">Development</li>
+            <li class="column__item button_navigation"><a href="#design-tools">Design</a></li>
+            <li class="column__item button_navigation"><a href="#development-tools">Development</a></li>
           </ul>
         </div>
 
         <div class="column footer__column">
           <h4 class="column__heading">Company Info</h4>
           <ul class="column__items">
-            <li class="column__item button_navigation">About Us</li>
-            <li class="column__item button_navigation">Our Partners</li>
+            <li class="column__item button_navigation"><a href="#our-team">About Us</a></li>
+            <li class="column__item button_navigation"><a href="#partners">Our Partners</a></li>
             <li class="column__item button_navigation">Blog</li>
           </ul>
         </div>
