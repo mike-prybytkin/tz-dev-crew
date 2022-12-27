@@ -30,7 +30,7 @@
 
   .promo__image {
     position: absolute;
-    right: 20px;
+    right: 10px;
     bottom: 0;
     width: 600px;
     height: 580px;
@@ -51,7 +51,7 @@
   }
   body.light-theme & {
     .promo__image {
-      right: -5px;
+      right: -15px;
       bottom: -13px;
     }
     color: $color-text-light-theme;

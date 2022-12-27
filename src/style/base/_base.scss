@@ -7,7 +7,6 @@ body {
   @include font-primary();
   background-color: $color-background-body;
   position: relative;
-  overflow-y: overlay;
   @extend %transition;
   &.light-theme {
     background: $color-bg-body-light-theme;

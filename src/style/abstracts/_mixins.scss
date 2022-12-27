@@ -40,7 +40,7 @@
     right: 0;
     bottom: 0;
     border: 2px solid transparent;
-    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(90deg, #fff 0 0) padding-box, linear-gradient(90deg, #fff 0 0);
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
     background: $background;
