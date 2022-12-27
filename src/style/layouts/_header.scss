@@ -5,6 +5,12 @@
   z-index: 1;
   padding-top: 26px;
   padding-bottom: 10px;
+  @extend %transition;
+  border-bottom: 1px solid $color-background-body;
+
+  body.scrollY & {
+    border-bottom: 1px solid $color-primary;
+  }
 }
 
 .header__wrapper {
