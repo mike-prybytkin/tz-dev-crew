@@ -19,6 +19,10 @@
       color: $color-heading;
       display: inline-block;
       margin: 0 0 20px;
+      @extend %transition;
+      body.light-theme & {
+        color: $color-text-light-theme;
+      }
     }
   }
 }

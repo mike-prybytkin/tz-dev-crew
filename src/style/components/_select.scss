@@ -10,5 +10,10 @@
     background: $color-background-body;
     outline: none;
     border: none;
+
+    body.light-theme & {
+      color: $color-text-light-theme;
+      background: $color-bg-body-light-theme;
+    }
   }
 }

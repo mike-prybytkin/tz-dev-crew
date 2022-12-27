@@ -13,6 +13,9 @@
     span {
       color: $color-primary;
     }
+    body.light-theme & {
+      color: $color-text-light-theme;
+    }
   }
 
   .promo__text {
@@ -31,6 +34,27 @@
     bottom: 0;
     width: 600px;
     height: 580px;
+    .light-theme-img {
+      display: none;
+    }
+    .dark-theme-img {
+      display: block;
+    }
+    body.light-theme & {
+      .light-theme-img {
+        display: block;
+      }
+      .dark-theme-img {
+        display: none;
+      }
+    }
+  }
+  body.light-theme & {
+    .promo__image {
+      right: -5px;
+      bottom: -13px;
+    }
+    color: $color-text-light-theme;
   }
 }
 
@@ -44,6 +68,12 @@
       .ico {
         &:hover {
           filter: brightness(0) saturate(100%) invert(55%) sepia(55%) saturate(2632%) hue-rotate(337deg) brightness(99%) contrast(105%);
+        }
+        body.light-theme & {
+          filter: brightness(0) saturate(100%) invert(12%) sepia(9%) saturate(1161%) hue-rotate(166deg) brightness(96%) contrast(95%);
+          &:hover {
+            filter: brightness(0) saturate(100%) invert(55%) sepia(55%) saturate(2632%) hue-rotate(337deg) brightness(99%) contrast(105%);
+          }
         }
       }
     }

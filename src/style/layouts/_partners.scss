@@ -21,6 +21,10 @@
       .brand {
         height: 50px;
         width: auto;
+        @extend %transition;
+        body.light-theme & {
+          filter: brightness(0) saturate(100%) invert(12%) sepia(8%) saturate(1357%) hue-rotate(166deg) brightness(96%) contrast(93%);
+        }
       }
     }
 

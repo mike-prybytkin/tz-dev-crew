@@ -13,3 +13,35 @@
 .button_navigation {
   @extend %button-navigation;
 }
+
+.button__switch-theme {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 2rem;
+  padding: 0 5px;
+  color: $color-text-primary;
+  @extend %transition;
+  &:hover {
+    color: $color-primary;
+  }
+  .dark-theme-icon {
+    display: none;
+  }
+  .light-theme-icon {
+    display: block;
+  }
+
+  body.light-theme & {
+    color: $color-text-light-theme;
+    &:hover {
+      color: $color-primary;
+    }
+    .light-theme-icon {
+      display: none;
+    }
+    .dark-theme-icon {
+      display: block;
+    }
+  }
+}

@@ -11,7 +11,7 @@
   <title>Dev Crew TZ</title>
 </head>
 
-<body>
+<body id="body">
   <span id="home"></span>
   <header class="header">
     <div class="wrapper header__wrapper">
@@ -34,6 +34,10 @@
         </ul>
       </nav>
       <div class="header__buttons">
+        <button class="button button__switch-theme" id="switch-theme">
+          <i class="fa-regular fa-sun light-theme-icon"></i>
+          <i class="fa-regular fa-moon dark-theme-icon"></i>
+        </button>
         <button class="button button_none-colored">Login</button>
         <button class="button button_colored">Sign Up</button>
       </div>
@@ -68,7 +72,8 @@
             </ul>
           </div>
           <div class="promo__image">
-            <img src="./assets/svg/promo-background.svg" alt="promo image">
+            <img class="dark-theme-img" src="./assets/svg/promo-background.svg" alt="promo image">
+            <img class="light-theme-img" src="./assets/svg/promo-bg-light-theme.png" alt="promo image">
           </div>
         </div>
       </div>

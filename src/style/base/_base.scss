@@ -8,20 +8,34 @@ body {
   background-color: $color-background-body;
   position: relative;
   overflow-y: overlay;
+  @extend %transition;
+  &.light-theme {
+    background: $color-bg-body-light-theme;
+    color: $color-text-light-theme;
+  }
 }
 
 h1 {
   @include font-primary(2.2rem, 600, $color-heading);
   display: inline-block;
   margin: 0;
+  body.light-theme & {
+    color: $color-text-light-theme;
+  }
 }
 
 h2 {
   @include font-primary(4.8rem, 500, $color-heading);
+  body.light-theme & {
+    color: $color-text-light-theme;
+  }
 }
 
 h4 {
   @include font-primary(2.4rem, 500, $color-text-additionaly);
+  body.light-theme & {
+    color: $color-text-light-theme;
+  }
 }
 
 a {

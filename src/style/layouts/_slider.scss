@@ -38,10 +38,19 @@
       font-size: 30px;
       color: $color-text-primary;
       @extend %transition;
+      body.light-theme & {
+        color: $color-text-light-theme;
+      }
+      
     }
     &:hover {
       &::after {
         color: $color-primary
+      }
+      body.light-theme & {
+        &::after {
+          color: $color-primary
+        }
       }
     }
   }
