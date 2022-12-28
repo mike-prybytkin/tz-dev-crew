@@ -1,16 +1,480 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./assets/favicon/favicon.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto&display=swap"
+    rel="stylesheet">
   <title>Dev Crew TZ</title>
 </head>
 
-<body>
-  <h1>Dew Crew</h1>
+<body id="body">
+  <span id="home"></span>
+  <header class="header">
+    <div class="wrapper header__wrapper">
+      <a href="#home" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
+        <h1 class="header__title button_navigation">antools.</h1>
+      </a>
+      <nav class="header__navigation">
+        <ul class="navigation">
+          <li class="button_navigation navigation__item"><a href="#home">Home</a></li>
+          <li class="button_navigation navigation__item">
+            <select class="select" onchange="window.location.href=this.options[this.selectedIndex].value"
+              name="categories" id="select-category">
+              <option class="select__item" value="#home">Categories</option>
+              <option class="select__item" value="#design-tools">Design</option>
+              <option class="select__item" value="#development-tools">Develop</option>
+            </select>
+          </li>
+          <li class="button_navigation navigation__item">My Collection</li>
+          <li class="button_navigation navigation__item">Blog</li>
+        </ul>
+      </nav>
+      <div class="header__buttons">
+        <button class="button button__switch-theme" id="switch-theme">
+          <i class="fa-regular fa-sun light-theme-icon"></i>
+          <i class="fa-regular fa-moon dark-theme-icon"></i>
+        </button>
+        <button class="button button_none-colored">Login</button>
+        <button class="button button_colored">Sign Up</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="promo">
+      <div class="wrapper">
+        <div class="promo__wrapper">
+          <div class="promo__content">
+            <h2 class="promo__heading">Awesome tools for Designer & Developer<span>.</span></h2>
+            <p class="promo__text">Antool is a web collection of information on paid or free Design and Development
+              tools</p>
+            <div class="form-wrapper promo__form">
+              <form class="form" action="GET" id="search-tools-form">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="form__input input_text" type="text" name="search-tools-input"
+                  placeholder="find more than 430+ tools...">
+                <input class="form__button button button_colored" type="button" value="Search">
+              </form>
+            </div>
+          </div>
+          <div class="promo__social-media">
+            <ul>
+              <li><a href="#" target="_blank"><img class="ico ico_facebook" src="./assets/icons/facebook.svg"
+                    alt="facebook"></a></li>
+              <li><a href="#" target="_blank"><img class="ico ico_instagram" src="./assets/icons/instagram.svg"
+                    alt="instagram"></a></li>
+              <li><a href="#" target="_blank"><img class="ico ico_twitter" src="./assets/icons/twitter.svg"
+                    alt="twitter"></a></li>
+            </ul>
+          </div>
+          <div class="promo__image">
+            <img class="dark-theme-img" src="./assets/svg/promo-background.svg" alt="promo image">
+            <img class="light-theme-img" src="./assets/svg/promo-bg-light-theme.png" alt="promo image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools" id="design-tools">
+      <div class="wrapper">
+        <div class="tools__wrapper">
+          <h2 class="tools__heading">Most Popular Tools</h2>
+          <p class="tools__text">Tools for the best Designers and Developers most popularly used in the world</p>
+          <div class="layout-3-column">
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/figma.svg" alt="figma">
+                </div>
+                <div class="tool__heading">
+                  <h4>FIGMA</h4>
+                  <span>Free</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/sketch.svg" alt="sketch">
+                </div>
+                <div class="tool__heading">
+                  <h4>Sketch</h4>
+                  <span>Trial & Paid</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/visual-studio-code.svg" alt="visual studio code">
+                </div>
+                <div class="tool__heading">
+                  <h4>Visual Studio Code</h4>
+                  <span>Free</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/notion.svg" alt="notion">
+                </div>
+                <div class="tool__heading">
+                  <h4>Notion</h4>
+                  <span>Free & Paid</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/slack.svg" alt="slack">
+                </div>
+                <div class="tool__heading">
+                  <h4>Slack</h4>
+                  <span>Free & Paid</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+            <div class="tool">
+              <div class="tool__title">
+                <div class="tool__icon">
+                  <img class="icon-square" src="./assets/svg/tools/invision.svg" alt="invision">
+                </div>
+                <div class="tool__heading">
+                  <h4>Invision</h4>
+                  <span>Free & Paid</span>
+                </div>
+              </div>
+              <div class="tool__content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+              <div class="tool__interaction">
+                <div>
+                  <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                  <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+                </div>
+                <button class="button button_none-colored tool__button">Visit</button>
+              </div>
+              <div class="tool__blur-effect"></div>
+            </div>
+          </div>
+          <div class="tools-button">
+            <button class="button button_bordered">Load more</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" id="partners">
+      <div class="wrapper partners__wrapper">
+        <h4 class="partners__heading">Trusted more than 150+ brand</h4>
+        <div class="partners__brands">
+          <img class="brand brand_microsoft" src="./assets/svg/partners/logos_microsoft.svg" alt="microsoft">
+          <img class="brand brand_google" src="./assets/svg/partners/logos_google.svg" alt="google">
+          <img class="brand brand_slack" src="./assets/svg/partners/logos_slack.svg" alt="slack">
+          <img class="brand brand_wordpress" src="./assets/svg/partners/logos_wordpress.svg" alt="wordpress">
+        </div>
+        <div class="partners__blur-effect"></div>
+      </div>
+    </section>
+
+    <section class="newcomer-tools" id="development-tools">
+      <div class="wrapper newcomer-tools__wrapper">
+        <div class="newcomer-tools__content">
+          <h2 class="newcomer-tools__heading">Newcomer Tools</h2>
+          <p class="newcomer-tools__text">Wow! see the latest update of the most recommended tools from reliable
+            designers and developers</p>
+          <button class="button button_colored newcomer-tools__explore-button">Explore more</button>
+        </div>
+        <div class="newcomer-tools__items layout-2-column">
+          <div class="tool">
+            <div class="tool__title">
+              <div class="tool__icon">
+                <img class="icon-square" src="./assets/svg/newcomer/zeplin.svg" alt="zeplin">
+              </div>
+              <div class="tool__heading">
+                <h4>Zeplin</h4>
+                <span>Free & Paid</span>
+              </div>
+            </div>
+            <div class="tool__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tool__interaction">
+              <div>
+                <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+              </div>
+              <button class="button button_none-colored tool__button">Visit</button>
+            </div>
+            <div class="tool__blur-effect"></div>
+          </div>
+          <div class="tool">
+            <div class="tool__title">
+              <div class="tool__icon">
+                <img class="icon-square" src="./assets/svg/newcomer/phpstorm.svg" alt="phpstorm">
+              </div>
+              <div class="tool__heading">
+                <h4>PHPStorm</h4>
+                <span>Free</span>
+              </div>
+            </div>
+            <div class="tool__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tool__interaction">
+              <div>
+                <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+              </div>
+              <button class="button button_none-colored tool__button">Visit</button>
+            </div>
+            <div class="tool__blur-effect"></div>
+          </div>
+          <div class="tool">
+            <div class="tool__title">
+              <div class="tool__icon">
+                <img class="icon-square" src="./assets/svg/newcomer/toolbox_app.svg" alt="toolbox">
+              </div>
+              <div class="tool__heading">
+                <h4>Toolbox</h4>
+                <span>Free</span>
+              </div>
+            </div>
+            <div class="tool__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tool__interaction">
+              <div>
+                <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+              </div>
+              <button class="button button_none-colored tool__button">Visit</button>
+            </div>
+            <div class="tool__blur-effect"></div>
+          </div>
+          <div class="tool">
+            <div class="tool__title">
+              <div class="tool__icon">
+                <img class="icon-square" src="./assets/svg/newcomer/procreate.svg" alt="procreate">
+              </div>
+              <div class="tool__heading">
+                <h4>Procreate</h4>
+                <span>Paid</span>
+              </div>
+            </div>
+            <div class="tool__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tool__interaction">
+              <div>
+                <img class="ico ico_like" src="./assets/svg/tools/like.svg" alt="like">
+                <img class="ico ico_folder" src="./assets/svg/tools/folder-add.svg" alt=" add folder">
+              </div>
+              <button class="button button_none-colored tool__button">Visit</button>
+            </div>
+            <div class="tool__blur-effect"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider" id="our-team">
+      <div class="wrapper slider__wrapper">
+
+        <div class="swiper team-swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="team-slide layout-2-column">
+                <div class="tead-slide__person person">
+                  <div class="person__info">
+                    <h5 class="person__name">Sam Wilson</h5>
+                    <p class="person__position">Creative Manager</p>
+                  </div>
+                  <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
+                  <img class="person__photo" src="./assets/png/team/Sam-Wilson.png" alt="Sam Wilson">
+                </div>
+                <div class="tead-slide__text">
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem fuga quaerat perferendis
+                    dolorem pariatur, illo fugit accusantium deleniti itaque! Quos, ex inventore nostrum eveniet dolorum
+                    eum dolorem consequatur possimus nesciunt?</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="team-slide layout-2-column">
+                <div class="tead-slide__person person">
+                  <div class="person__info">
+                    <h5 class="person__name">Ronald Richards</h5>
+                    <p class="person__position">Product Manager</p>
+                  </div>
+                  <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
+                  <img class="person__photo" src="./assets/png/team/Ronald-Richards.png" alt="Ronald Richards">
+                </div>
+                <div class="tead-slide__text">
+                  <p>Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex
+                    tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia
+                    incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute
+                    officia excepteur non laboris id qui ad.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="team-slide layout-2-column">
+                <div class="tead-slide__person person">
+                  <div class="person__info">
+                    <h5 class="person__name">John Doyle</h5>
+                    <p class="person__position">Sales Manager</p>
+                  </div>
+                  <img class="person__background" src="./assets/png/team/bg-slide.png" alt="background circle">
+                  <img class="person__photo" src="./assets/png/team/John-Doyle.png" alt="John Doyle">
+                </div>
+                <div class="tead-slide__text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis natus sint nostrum pariatur quidem
+                    vitae perspiciatis corrupti ut eum quos hic iusto unde, tempore enim exercitationem numquam aliquid
+                    accusantium eligendi dolorem. Expedita ad quas ab reiciendis id, fuga rem ipsum doloremque incidunt
+                    ducimus velit necessitatibus laborum laudantium eos labore sint dicta eligendi dolore rerum? Modi
+                    doloribus nemo aliquid doloremque. Perferendis illum error commodi veniam expedita enim, fugiat
+                    reprehenderit culpa amet officiis voluptate possimus sit hic laboriosam unde libero molestias dolor
+                    veritatis ea, quod excepturi voluptatum consequatur! Illum, corrupti aliquid.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper__button swiper-button-next"></div>
+          <div class="swiper__button swiper-button-prev"></div>
+          <div class="swiper__pagination swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contributor">
+      <div class="wrapper contributor__wrapper">
+        <h2 class="contributor__heading">Become a contributor?</h2>
+        <p class="contributor__text">Join us and get tips & tricks to become a great Designer and Developer</p>
+        <div class="form-wrapper contributor__form">
+          <form class="form" action="GET" id="contributor-email-form">
+            <input class="form__input input_text" type="text" name="contributor-email-input"
+              placeholder="Enter your email">
+            <input class="form__button button button_colored" type="button" value="Join Us">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+      <div class="layout-4-column">
+
+        <div class="column footer__column">
+          <a href="#home" class="logo"><img class="logo-icon" src="./assets/svg/company-logo.svg" alt="antools logo">
+            <h4 class="column__heading header__title button_navigation">antools.</h4>
+          </a>
+          <ul class="column__items">
+            <li class="column__item column__item_bold">&copy; 2021. Antools</li>
+            <li class="column__item">Antool is a web collection of information on paid or free Design and Development
+              tools</li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Contact Us</h4>
+          <ul class="column__items">
+            <li class="column__item"><a class="button_navigation" href="tel:+621987463" title="telephone"><i
+                  class="fa-solid fa-phone-volume"></i> +621987463</a></li>
+            <li class="column__item"><a class="button_navigation"
+                href="https://www.google.com/maps/place/Building+No+10+Cyberhub/@28.4908776,77.0838359,15z/data=!4m5!3m4!1s0x390d1938e95b3923:0xf51b0e5de754d497!8m2!3d28.4943288!4d77.0869634"
+                target="_blank" title="address"><i class="fa-solid fa-location-dot"></i> M Building, No.10 A</a></li>
+            <li class="column__item"><a class="button_navigation" href="mailto:antools@awesome.com"><i
+                  class="fa-solid fa-envelope"></i> antools@awesome.com</a></li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Categories</h4>
+          <ul class="column__items">
+            <li class="column__item button_navigation"><a href="#design-tools">Design</a></li>
+            <li class="column__item button_navigation"><a href="#development-tools">Development</a></li>
+          </ul>
+        </div>
+
+        <div class="column footer__column">
+          <h4 class="column__heading">Company Info</h4>
+          <ul class="column__items">
+            <li class="column__item button_navigation"><a href="#our-team">About Us</a></li>
+            <li class="column__item button_navigation"><a href="#partners">Our Partners</a></li>
+            <li class="column__item button_navigation">Blog</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

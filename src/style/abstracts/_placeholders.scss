@@ -1,0 +1,79 @@
+%transition {
+  transition: all .3s ease-in-out;
+}
+
+%button-rectangular {
+  padding: 12px 28px;
+  border-radius: 8px;
+  @extend %transition;
+}
+
+%button-colored {
+  background: $color-primary;
+  color: $color-light;
+  border: 1px solid $color-primary;
+  &:hover {
+    border-color: $color-light;
+  }
+
+  body.light-theme & {
+    color: $color-text-light-theme;
+    &:hover {
+      border-color: $color-text-light-theme;
+    }
+  }
+}
+
+%button-none-colored {
+  background: transparent;
+  color: $color-text-additionaly;
+  border: 1px solid transparent;
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  body.light-theme & {
+    color: $color-text-light-theme;
+    border-color: transparent;
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+
+%button-navigation {
+  cursor: pointer;
+  @extend %transition;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    color: $color-primary;
+    border-bottom: 2px solid $color-primary;
+  }
+}
+
+%button-bordered {
+  background: transparent;
+  color: $color-primary;
+  border: 1px solid $color-button-bordered;
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  body.light-theme & {
+    color: $color-text-light-theme;
+    border-color: $color-text-light-theme;
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+
+%blur-effect {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  background: $color-blur;
+  border-radius: 50%;
+  @extend %transition;
+  filter: blur(50px);
+}
